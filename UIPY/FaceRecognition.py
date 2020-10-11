@@ -7,17 +7,20 @@ from PyQt5 import uic
 from PyQt5.QtGui import QImage,QPixmap
 import cv2
 
-class App(QWidget):
+class YuzKaydet(QWidget):
     def __init__(self):
         super().__init__()
         self.timer = QTimer()
         uic.loadUi(r"UI\FaceRecognition.ui",self)
         self.btOpen.clicked.connect(self.KameraAc)
         self.btClose.clicked.connect(self.Kapat)
-        self.show()    
+  
 
     def Kapat(self):
-        self.cam.release()
+        try:
+            self.cam.release()
+        except:
+            pass
         self.timer.stop()
         self.close()
 
@@ -49,5 +52,6 @@ class App(QWidget):
         
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    ex = App()
+    ex = YuzKaydet()
+    ex.show()
     sys.exit(app.exec_())        
