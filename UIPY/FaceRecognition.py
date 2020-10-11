@@ -41,7 +41,7 @@ class App(QWidget):
             heigth,width,channel = frame.shape
             step = channel*width
             qImg = QImage(frame.data,width,heigth,step,QImage.Format_BGR888)
-            self.label.setPixmap(QPixmap.fromImage(qImg))
+            self.lbCamera.setPixmap(QPixmap.fromImage(qImg))
             if cv2.waitKey(1) & 0xFF == ord("q"):
                 break
         self.cam.release()
