@@ -51,7 +51,7 @@
    <property name="title">
     <string>Kamera</string>
    </property>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="lbCamera">
     <property name="geometry">
      <rect>
       <x>4</x>
