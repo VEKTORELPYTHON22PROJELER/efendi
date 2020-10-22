@@ -46,9 +46,9 @@ class ListOfPeople(QMainWindow):
         isim =  self.isim.Text()
         soyisim = self.soyisim.Text()
         ilId = self.ilListe[self.ilListe.index(self.cmbil.currentText())][0]
-        ilId = self.ilceListe[self.ilceListe.index(self.cmbilce.currentText())][0]
+        ilceId = self.ilceListe[self.ilceListe.index(self.cmbilce.currentText())][0]
         self.db.tabloAdi = "FACES"
-        self.db.insert(alan=["NAME", "LAST_NAME", "IL_ID", "ILCE_ID"],deger=[f"'{isim}'"])
+        self.db.insert(alan=["NAME", "LAST_NAME", "IL_ID", "ILCE_ID"],deger=[f"'{isim}','{soyisim}','{ilId}','{ilceId}'"])
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
