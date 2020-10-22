@@ -5,6 +5,7 @@ from  PyQt5.QtWidgets import QApplication,QWidget
 from  PyQt5.QtCore import QTimer
 from PyQt5 import uic
 from PyQt5.QtGui import QImage,QPixmap
+from PyQt5.Qt import Qt
 import cv2
 
 class YuzTani(QWidget):
@@ -15,6 +16,9 @@ class YuzTani(QWidget):
         self.btOpen.clicked.connect(self.KameraAc)
         self.btClose.clicked.connect(self.Kapat)
 
+
+    
+        
 
     def Kapat(self):
         try:
@@ -37,7 +41,7 @@ class YuzTani(QWidget):
     def Gosterim(self):
         while True:
             ret,frame = self.cam.read()
-            buyumeFaktor = 0.5
+            buyumeFaktor = 0.2
             frame = cv2.resize(frame,None,fx=buyumeFaktor,fy=buyumeFaktor,
             interpolation=cv2.INTER_AREA)
 
@@ -45,8 +49,10 @@ class YuzTani(QWidget):
             step = channel*width
             qImg = QImage(frame.data,width,heigth,step,QImage.Format_BGR888)
             self.lbCamera.setPixmap(QPixmap.fromImage(qImg))
-            if cv2.waitKey(1) & 0xFF == ord("q"):
-                break
+
+
+            # if cv2.waitKey(1) & 0xFF == ord("q"):
+            #     break
         self.cam.release()
         self.timer.stop()
         
