@@ -1,5 +1,6 @@
 import sys
-sys.path.append(r"C:\Users\vektorel\Documents\GitHub\efendi\DB")
+import os
+sys.path.append(os.getcwd() + os.sep+ "DB")
 from  PyQt5.QtWidgets import QApplication,QMainWindow
 from  PyQt5.QtGui import QIcon
 from PyQt5 import uic
@@ -12,7 +13,7 @@ class ListOfPeople(QMainWindow):
         self.db = DBTool(dbAdres=r"DB\facedb.db",tabloAdi="")
         self.ilListe = []
         self.initUI()
-        
+
        
 
     def initUI(self):
@@ -39,6 +40,15 @@ class ListOfPeople(QMainWindow):
         self.ilceListe = self.db.select(sart=f"IL_ID={ilid}")
         for item in self.ilceListe:
             self.cmbilce.addItem(item[1])
+
+
+    def Kaydet(self):
+        isim =  self.isim.Text()
+        soyisim = self.soyisim.Text()
+        ilId = self.ilListe[self.ilListe.index(self.cmbil.currentText())][0]
+        ilId = self.ilceListe[self.ilceListe.index(self.cmbilce.currentText())][0]
+        self.db.tabloAdi = "FACES"
+        self.db.insert(alan=["NAME", "LAST_NAME", "IL_ID", "ILCE_ID"],deger=[f"'{isim}'"])
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
