@@ -13,14 +13,13 @@ class ListOfPeople(QMainWindow):
         self.db = DBTool(dbAdres=r"DB\facedb.db",tabloAdi="")
         self.ilListe = []
         self.initUI()
-
-       
+     
 
     def initUI(self):
         uic.loadUi(r"UI\Listofpeople.ui",self)
         self.cmbIlDoldur()
         self.cmbil.currentIndexChanged.connect(self.cmbilceDoldur)
-        
+        self.btsave.clicked.connect(self.Kaydet)
     
     def cmbIlDoldur(self):
         self.cmbil.addItem("Seçiniz")
@@ -43,10 +42,14 @@ class ListOfPeople(QMainWindow):
 
 
     def Kaydet(self):
-        isim =  self.isim.Text()
-        soyisim = self.soyisim.Text()
-        ilId = self.ilListe[self.ilListe.index(self.cmbil.currentText())][0]
-        ilceId = self.ilceListe[self.ilceListe.index(self.cmbilce.currentText())][0]
+        isim =  self.isim.text()
+        soyisim = self.soyisim.text()
+        for item in self.ilListe:
+            if item[1] == self.cmbil.currentText():
+                ilId = item[0]
+        for item in self.ilceListe:
+            if item[1] == self.cmbilce.currentText():
+                ilceId = item[0]
         self.db.tabloAdi = "FACES"
         self.db.insert(alan=["NAME", "LAST_NAME", "IL_ID", "ILCE_ID"],deger=[f"'{isim}','{soyisim}','{ilId}','{ilceId}'"])
 
