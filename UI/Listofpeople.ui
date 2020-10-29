@@ -24,7 +24,7 @@
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="2" column="0">
-     <widget class="QPushButton" name="btKaydet">
+     <widget class="QPushButton" name="btcancel">
       <property name="text">
        <string>İptal</string>
       </property>
@@ -104,7 +104,7 @@
      </layout>
     </item>
     <item row="1" column="0">
-     <widget class="QPushButton" name="btIptal">
+     <widget class="QPushButton" name="btsave">
       <property name="text">
        <string>Kaydet</string>
       </property>

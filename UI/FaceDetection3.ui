@@ -64,88 +64,83 @@
      <string/>
     </property>
    </widget>
-   <widget class="QComboBox" name="iller">
+   <widget class="QComboBox" name="isim_soyisim">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>100</y>
-      <width>71</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <item>
-     <property name="text">
-      <string>iller</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QComboBox" name="isim">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
+      <x>30</x>
       <y>40</y>
-      <width>69</width>
+      <width>151</width>
       <height>22</height>
      </rect>
     </property>
     <item>
      <property name="text">
-      <string>isim</string>
+      <string>isim_soyisim</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>olgucan</string>
+      <string> ali polat </string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>ebuz</string>
+      <string>mehmet şahin </string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>fatmanur</string>
+      <string>aylin özkan</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>ahmet hüsrev</string>
+      <string>ahmey ersoy</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>uğur </string>
+      <string>ümit alkan</string>
      </property>
     </item>
-   </widget>
-   <widget class="QComboBox" name="soyisim">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>40</y>
-      <width>69</width>
-      <height>22</height>
-     </rect>
-    </property>
     <item>
      <property name="text">
-      <string>soyisim</string>
+      <string>recep eker</string>
      </property>
     </item>
-   </widget>
-   <widget class="QComboBox" name="ilceler">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>100</y>
-      <width>69</width>
-      <height>21</height>
-     </rect>
-    </property>
     <item>
      <property name="text">
-      <string>ilceler</string>
+      <string>sevda yılmaz</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>cem korkmaz</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>melda çağlayan</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>simge koyuncu</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>beste söylemez</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>akın özhaseki</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>süleyman yılmaz</string>
      </property>
     </item>
    </widget>
@@ -167,7 +162,7 @@
      <rect>
       <x>-1</x>
       <y>0</y>
-      <width>201</width>
+      <width>211</width>
       <height>261</height>
      </rect>
     </property>
